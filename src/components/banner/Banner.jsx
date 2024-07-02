@@ -6,17 +6,17 @@ import banner from "../../assets/images/banner_1.jpg";
 const Banner = () => {
   return (
     <div className="top-[72px] relative">
-      <div className="h-[500px] w-full ">
+      <div className="h-[450px] w-full ">
         <img
           src={banner}
           alt="Banner"
-          className="w-full h-[100%] object-cover"
+          className="w-full h-[100%] object-cover object-top"
         />
       </div>
 
-      <div className="px-4 py-32 mx-auto">
+      <div className="px-4 py-9 mx-auto ">
         <div className="text-center lg:px-28">
-          <h1 className="text-5xl lg:text-7xl leading-snug mb-5 font-medium">
+          <h1 className="text-4xl lg:text-4xl leading-snug mb-5 font-bold">
             Welcome to the <span className="text-green-800">National </span>{" "}
             <span>Youth</span> <span className="text-red-600">Alliance</span>{" "}
             official site
