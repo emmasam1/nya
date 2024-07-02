@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header className={`bg-[#FFF9EA] w-full z-50 fixed shadow-md`}>
-      <div className={`h-11 flex items-center border-b-[.1px] px-5 justify-end ${isScrolled ? 'opacity-0 invisible h-0' : 'opacity-100 visible'} transition-opacity duration-500`}>
+      <div className={`flex items-center border-b-[.1px] px-5 justify-end ${isScrolled ? 'opacity-0 invisible h-0' : 'opacity-100 visible h-11'} transition-opacity duration-500`}>
         <div className="mr-5 flex items-center"><MdOutlinePhoneIphone className="mr-1"/><h2>0807-370-3001</h2></div>
         <div className="mr-5 flex items-center"><MdOutlineAttachEmail className="mr-1"/><h2>info@nya.com</h2></div>
         <div className="lg:flex gap-4 items-center hidden ml-5">
