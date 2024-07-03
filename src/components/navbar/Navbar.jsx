@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa6";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { FaFacebook, FaTwitter, FaWhatsapp, FaAngleDown } from "react-icons/fa";
 import { MdOutlinePhoneIphone, MdOutlineAttachEmail } from "react-icons/md";
 import { Sling as Hamburger } from "hamburger-react";
 import logo from '../../assets/logo.png';
@@ -8,6 +8,7 @@ import logo from '../../assets/logo.png';
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,13 +22,27 @@ const Navbar = () => {
 
   const navItem = [
     { path: "/", link: "HOME" },
-    { path: "/about", link: "WHO WE ARE" },
-    { path: "/media", link: "MEDIA +" },
+    { 
+      link: "WHO WE ARE", 
+      dropdown: [
+        { path: "/about", link: "About NYA" },
+        { path: "/about/team", link: "Team" },
+      ] 
+    },
+    { 
+      link: "MEDIA", 
+      dropdown: [
+        { path: "/media", link: "Press Release" },
+        { path: "/gallery", link: "Gallery" },
+      ] 
+    },
     { path: "/contentions", link: "Contentions" },
     { path: "/resources", link: "Resources" },
     { path: "/contact", link: "Contact" },
     { path: "/more", link: "More..." },
   ];
+
+  //const isActive = (path) => location.pathname === path;
 
   return (
     <header className={`bg-[#FFF9EA] w-full z-50 fixed shadow-md`}>
@@ -52,9 +67,28 @@ const Navbar = () => {
         </Link>
 
         <ul className="md:flex gap-12 text-sm font-bold hidden">
-          {navItem.map(({ path, link }) => (
-            <li className="" key={path}>
-              <NavLink to={path}>{link}</NavLink>
+          {navItem.map(({ path, link, dropdown }) => (
+            <li className="relative group py-2" key={link}>
+              {dropdown ? (
+                <span className="group-hover:text-red-700 flex items-center cursor-pointer">
+                  {link} <FaAngleDown className="ml-2" />
+                </span>
+              ) : (
+                <NavLink to={path} className={({ isActive }) => isActive ? "active" : ""}>
+                  {link}
+                </NavLink>
+              )}
+              {dropdown && (
+                <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded hidden flex-col group-hover:block z-50 w-40">
+                  {dropdown.map(({ path, link }) => (
+                    <li key={path} className="hover:bg-green-400 hover:text-white">
+                      <NavLink className="block px-4 py-2" to={path}>
+                        {link}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -71,9 +105,9 @@ const Navbar = () => {
               <FaWhatsapp />
             </Link>
           </div>
-          <button className="border-red-500 text-red-500 border-2 px-6 py-2 font-medium rounded hover:bg-red-500 hover:text-white transition-all duration-300 ease-in">
+          <Link to='/donate' className="border-red-500 text-red-500 border-2 px-6 py-2 font-medium rounded hover:bg-red-500 hover:text-white transition-all duration-300 ease-in">
             Donate
-          </button>
+          </Link>
         </div>
         {/* mobile menu button */}
         <div className="md:hidden">
@@ -89,15 +123,34 @@ const Navbar = () => {
               : "opacity-0 invisible pointer-events-none"
           }`}
         >
-          {navItem.map(({ path, link }) => (
-            <li className="text-black" key={path}>
-              <NavLink
-                className={({ isActive }) => (isActive ? "active" : "")}
-                onClick={() => setOpen(false)}
-                to={path}
-              >
-                {link}
-              </NavLink>
+          {navItem.map(({ path, link, dropdown }) => (
+            <li className="text-black" key={link}>
+              {dropdown ? (
+                <>
+                  <span className="cursor-pointer">{link}</span>
+                  <ul className="space-y-2 mt-2">
+                    {dropdown.map(({ path, link }) => (
+                      <li key={path}>
+                        <NavLink
+                          className={({ isActive }) => (isActive ? "active" : "")}
+                          onClick={() => setOpen(false)}
+                          to={path}
+                        >
+                          {link}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <NavLink
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={() => setOpen(false)}
+                  to={path}
+                >
+                  {link}
+                </NavLink>
+              )}
             </li>
           ))}
         </ul>
@@ -107,3 +160,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

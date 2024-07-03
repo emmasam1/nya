@@ -14,6 +14,7 @@ import Contact from './pages/Contact.jsx';
 import Resources from './pages/Resources.jsx';
 import Contentions from './pages/Contentions.jsx';
 import More from './pages/More.jsx';
+import Donate from './pages/Donate.jsx';
 
 
 const router = createBrowserRouter([
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/more",
         element: <More />
+      },
+      {
+        path: "/donate",
+        element: <Donate />
       },
     ]
   },
