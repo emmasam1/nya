@@ -1,0 +1,141 @@
+API Documentation
+Authentication Routes
+Register User
+
+URL: /api/auth/register
+Method: POST
+Description: Register a new user.
+Request Body:
+json
+Copy code
+{
+  "name": "string",
+  "email": "string",
+  "password": "string"
+}
+Responses:
+201 Created: User registered successfully.
+400 Bad Request: User already exists or missing required fields.
+500 Internal Server Error: Server error.
+Login User
+
+URL: /api/auth/login
+Method: POST
+Description: Login user and get authentication token.
+Request Body:
+json
+Copy code
+{
+  "email": "string",
+  "password": "string"
+}
+Responses:
+200 OK: Login successful. Returns JWT token.
+400 Bad Request: Invalid credentials.
+500 Internal Server Error: Server error.
+Post Routes
+Create Post
+
+URL: /api/posts
+Method: POST
+Description: Create a new post (BlogAdmin or SuperAdmin).
+Authorization: Bearer token required.
+Request Body:
+json
+Copy code
+{
+  "title": "string",
+  "content": "string",
+  "categoryId": "string",
+  "images": ["string"]
+}
+Responses:
+201 Created: Post created successfully.
+400 Bad Request: Missing required fields or invalid input.
+401 Unauthorized: Authorization denied.
+403 Forbidden: User not authorized to create posts.
+500 Internal Server Error: Server error.
+Get Approved Posts
+
+URL: /api/posts
+Method: GET
+Description: Get all approved posts.
+Responses:
+200 OK: Returns an array of approved posts.
+500 Internal Server Error: Server error.
+Approve Post
+
+URL: /api/posts/approve/:id
+Method: PUT
+Description: Approve post by ID (SuperAdmin only).
+Authorization: Bearer token required.
+Parameters:
+id: Post ID to approve.
+Responses:
+200 OK: Post approved successfully.
+400 Bad Request: Post is already approved or invalid input.
+401 Unauthorized: Authorization denied.
+403 Forbidden: User not authorized to approve posts.
+404 Not Found: Post not found.
+500 Internal Server Error: Server error.
+User Routes
+Update User Profile
+
+URL: /api/users/profile
+Method: PUT
+Description: Update user profile.
+Authorization: Bearer token required.
+Request Body:
+json
+Copy code
+{
+  "name": "string",
+  "email": "string"
+}
+Responses:
+200 OK: User profile updated successfully.
+400 Bad Request: Invalid input or missing fields.
+401 Unauthorized: Authorization denied.
+404 Not Found: User not found.
+500 Internal Server Error: Server error.
+Get User by ID
+
+URL: /api/users/:id
+Method: GET
+Description: Get user by ID.
+Authorization: Bearer token required.
+Parameters:
+id: User ID.
+Responses:
+200 OK: Returns user details.
+401 Unauthorized: Authorization denied.
+404 Not Found: User not found.
+500 Internal Server Error: Server error.
+Category Routes
+Create Category
+
+URL: /api/categories
+Method: POST
+Description: Create a new category (Admin only).
+Authorization: Bearer token required.
+Request Body:
+json
+Copy code
+{
+  "name": "string",
+  "description": "string"
+}
+Responses:
+201 Created: Category created successfully.
+400 Bad Request: Invalid input or missing fields.
+401 Unauthorized: Authorization denied.
+403 Forbidden: User not authorized to create categories.
+500 Internal Server Error: Server error.
+Get Categories
+
+URL: /api/categories
+Method: GET
+Description: Get all categories.
+Responses:
+200 OK: Returns an array of categories.
+500 Internal Server Error: Server error.

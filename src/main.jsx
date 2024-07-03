@@ -9,6 +9,7 @@ import './index.css'
 import Home from './pages/Home.jsx';
 import Media from './pages/Media.jsx';
 import About from './pages/About.jsx';
+import About_nya_wc from './pages/About_nya_wc.jsx';
 import Contact from './pages/Contact.jsx';
 import Resources from './pages/Resources.jsx';
 import Contentions from './pages/Contentions.jsx';
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />
+      },
+      {
+        path: "/working-committee",
+        element: <About_nya_wc />
       },
       {
         path: "/contact",
