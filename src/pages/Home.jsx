@@ -37,7 +37,11 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <div className="m-auto mt-20 w-11/12">
+      <div className="m-auto mt-20 w-11/12 pt-3">
+      <div className="m-auto mt-10 mb-10 flex justify-center">
+        <h1 className="text-center bg-green-800 rounded-full text-white text-2xl font-semibold font-mono px-5">Latest events / Press release</h1>
+      </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {data.map((e) => (
             <Card
