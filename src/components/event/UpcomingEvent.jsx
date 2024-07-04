@@ -35,11 +35,11 @@ const UpcomingEvent = () => {
 
   return (
     <div className=" text-white ">
-      <div className="max-w-7xl mx-auto py-2 px-4 w-full">
+      <div className="max-w-7xl mx-auto pt-8 px-4 w-full">
         <div className="max-w-full mx-auto  overflow-hidden w-full">
           {/* Event Title */}
-          <div className="bg-gray-800 text-white text-center py-2">
-            <h3 className="text-lg font-bold">Upcoming Executive meeting</h3>
+          <div className="text-white text-center py-2">
+            <h3 className="text-lg font-bold text-black">Upcoming Executive meeting</h3>
           </div>
 
           {/* Countdown Timers */}
