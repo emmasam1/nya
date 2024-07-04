@@ -1,4 +1,5 @@
 import Banner from "../components/banner/Banner";
+import MissionQoute from "../components/missionQoute/MissionQoute";
 import Press_release from "../components/press/Press_release";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
       <Banner />
       <Press_release />
+      <MissionQoute />
     </div>
   );
 };
