@@ -13,23 +13,23 @@ const Press_release = () => {
         {
           id: 1,
           image: image1,
-          title: "Preparing and folding laundry",
+          title: "Green Jobs Revolution: A Sustainable Future",
           content:
-            "Our caregivers are trained to efficiently handle laundry tasks, including washing, drying, folding, and putting away clothes. We ensure that your loved one's clothes are clean, fresh, and well-organized.",
+            "Our party champions a green jobs revolution aimed at creating sustainable employment opportunities in renewable energy, conservation, and technology sectors. By investing in green infrastructure and innovation, we ensure a prosperous future while combating climate change.",
         },
         {
           id: 2,
           image:image2,
-          title: "Taking out the garbage as directed",
+          title: "Education Equity: Quality Learning for Every Child",
           content:
-            "Our caregivers can assist with regular garbage disposal according to your specific instructions. Whether it's daily, weekly, or as needed, we ensure that your home remains clean and sanitary.",
+            "We are committed to ensuring every child receives a quality education, regardless of background or location. Our policies focus on equitable funding, modernizing curriculum, and supporting teachers to prepare students for a rapidly evolving world.",
         },
         {
           id: 3,
           image:image3,
-          title: "Home organization and management",
+          title: "Healthcare for All: Affordable and Accessible",
           content:
-            "We help maintain a clutter-free and organized home environment. From arranging items to keeping spaces tidy, our caregivers ensure that everything is in its place.",
+            " Our vision includes a healthcare system that guarantees affordable and accessible care for all citizens. Through reforms that prioritize preventive care, reduce costs, and expand coverage, we aim to improve health outcomes and enhance quality of life nationwide.",
         },
       ];
   return (
