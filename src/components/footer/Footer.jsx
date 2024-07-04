@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Input } from "antd";
+import {  Form, Input } from "antd";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
@@ -15,8 +15,8 @@ const Footer = () => {
 
   return (
     <div className="bg-[#FFF9EA]">
-      <div className="m-auto mt-20 w-11/12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="m-auto mt-20 w-11/12 sm:w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-10 col-span-1">
             <h2 className="mb-10 text-3xl font-bold text-green-800">Join Us</h2>
             <Form
@@ -184,7 +184,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="mt-5 flex justify-between">
+            <div className="mt-5 flex flex-wrap justify-between sm:justify-start">
               <Link
                 to=""
                 className="footer-link relative font-semibold text-[.8rem] hover:text-green-700"
