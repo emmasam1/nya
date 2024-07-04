@@ -26,14 +26,19 @@ const Navbar = () => {
       link: "WHO WE ARE", 
       dropdown: [
         { path: "/about", link: "About NYA" },
-        { path: "/about/team", link: "Team" },
+        { path: "/working-committee", link: "NYA Working Committee" },
+        { path: "/what-we-do", link: "What we do" },
+        { path: "/who-we-serve", link: "Who We Serve" },
+        { path: "/history", link: "Our History" },
+        { path: "/leadership", link: "Leadership" },
       ] 
     },
     { 
       link: "MEDIA", 
       dropdown: [
-        { path: "/media", link: "Press Release" },
-        { path: "/gallery", link: "Gallery" },
+        { path: "/news", link: "Press Release" },
+        { path: "/gallery", link: "Galleries" },
+        { path: "/videos", link: "Videos" },
       ] 
     },
     { path: "/contentions", link: "Contentions" },

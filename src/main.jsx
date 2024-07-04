@@ -16,6 +16,12 @@ import Resources from './pages/Resources.jsx';
 import Contentions from './pages/Contentions.jsx';
 import More from './pages/More.jsx';
 import Donate from './pages/Donate.jsx';
+import Gallery from './pages/Gallery.jsx';
+import Videopage from './pages/Videopage.jsx';
+import What_we_do from './pages/What_we_do.jsx';
+import Who_we_serve from './pages/Who_we_serve.jsx';
+import History from './pages/History.jsx';
+import Leadership from './pages/Leadership.jsx';
 
 
 const router = createBrowserRouter([
@@ -28,7 +34,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/media",
+        path: "/news",
         element: <Media />
       },
       {
@@ -58,6 +64,30 @@ const router = createBrowserRouter([
       {
         path: "/donate",
         element: <Donate />
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />
+      },
+      {
+        path: "/videos",
+        element: <Videopage />
+      },
+      {
+        path: "/what-we-do",
+        element: <What_we_do />
+      },
+      {
+        path: "/who-we-serve",
+        element: <Who_we_serve />
+      },
+      {
+        path: "/history",
+        element: <History />
+      },
+      {
+        path: "/leadership",
+        element: <Leadership />
       },
     ]
   },

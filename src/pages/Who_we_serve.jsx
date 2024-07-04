@@ -1,7 +1,7 @@
 import PageBanner from './PageBanner'
 
-const About_nya_wc = () => {
-  const title= "N.Y.A Working Committee page"
+const Who_we_serve = () => {
+    const title= "N.Y.A Mission page"
   return (
     <div>
       <PageBanner title={title} />
@@ -9,4 +9,4 @@ const About_nya_wc = () => {
   )
 }
 
-export default About_nya_wc
+export default Who_we_serve

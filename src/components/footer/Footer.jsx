@@ -90,7 +90,7 @@ const Footer = () => {
                 <ul className="mt-4">
                   <li className="mb-4">
                     <Link
-                      to=""
+                      to="#"
                       className="footer-link relative font-semibold text-[.8rem] hover:text-green-700"
                     >
                       What we do
@@ -106,7 +106,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-4">
                     <Link
-                      to=""
+                      to="/history"
                       className="footer-link relative font-semibold text-[.8rem] hover:text-green-700"
                     >
                       Our history
