@@ -1,5 +1,6 @@
 import Banner from "../components/banner/Banner";
-import MissionQoute from "../components/missionQoute/MissionQoute";
+import Face from "../components/face/Face";
+import MissionQuote from "../components/missionQuote/MissionQuote";
 import Press_release from "../components/press/Press_release";
 
 const Home = () => {
@@ -8,7 +9,8 @@ const Home = () => {
     <div>
       <Banner />
       <Press_release />
-      <MissionQoute />
+      <MissionQuote />
+      <Face />
     </div>
   );
 };
