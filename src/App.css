@@ -34,3 +34,12 @@
 .active-button {
   color: rgb(225, 26, 26);
 }
+
+.carousel .slide {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.carousel .slide.selected {
+  opacity: 1;
+}
