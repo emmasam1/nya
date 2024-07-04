@@ -34,7 +34,7 @@ const Banner = () => {
 
   return (
     <div className="top-[123px] relative">
-      <div className="carousel-container w-full overflow-hidden">
+      <div className="carousel-container w-[99%] m-auto overflow-hidden">
         <Carousel
           showThumbs={false}
           showStatus={false}
