@@ -39,13 +39,13 @@ const UpcomingEvent = () => {
         <div className="max-w-full mx-auto  overflow-hidden w-full">
           {/* Event Title */}
           <div className="text-white text-center py-2">
-            <h3 className="text-lg font-bold text-black">Upcoming Executive meeting</h3>
+            <h3 className="text-lg font-bold text-black">Upcoming: Executive meeting</h3>
           </div>
 
           {/* Countdown Timers */}
           <div className="flex flex-col md:flex-row justify-around p-4">
             {/* Days Countdown */}
-            <div className="flex flex-col items-center bg-blue-500 rounded-lg p-4 mb-4 md:mb-0">
+            <div className="flex flex-col items-center rounded-lg p-4 mb-4 md:mb-0">
               <div className="bg-blue-700 rounded-full w-16 h-16 flex items-center justify-center mb-2">
                 <span className="text-white text-2xl">{days}</span>
               </div>
@@ -53,7 +53,7 @@ const UpcomingEvent = () => {
             </div>
 
             {/* Hours Countdown */}
-            <div className="flex flex-col items-center bg-green-500 rounded-lg p-4 mb-4 md:mb-0">
+            <div className="flex flex-col items-center rounded-lg p-4 mb-4 md:mb-0">
               <div className="bg-green-700 rounded-full w-16 h-16 flex items-center justify-center mb-2">
                 <span className="text-white text-2xl">{hours}</span>
               </div>
@@ -61,7 +61,7 @@ const UpcomingEvent = () => {
             </div>
 
             {/* Minutes Countdown */}
-            <div className="flex flex-col items-center bg-yellow-500 rounded-lg p-4 mb-4 md:mb-0">
+            <div className="flex flex-col items-center rounded-lg p-4 mb-4 md:mb-0">
               <div className="bg-yellow-700 rounded-full w-16 h-16 flex items-center justify-center mb-2">
                 <span className="text-white text-2xl">{minutes}</span>
               </div>
@@ -69,7 +69,7 @@ const UpcomingEvent = () => {
             </div>
 
             {/* Seconds Countdown */}
-            <div className="flex flex-col items-center bg-red-500 rounded-lg p-4 mb-4 md:mb-0">
+            <div className="flex flex-col items-center rounded-lg p-4 mb-4 md:mb-0">
               <div className="bg-red-700 rounded-full w-16 h-16 flex items-center justify-center mb-2">
                 <span className="text-white text-2xl">{seconds}</span>
               </div>
